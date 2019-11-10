@@ -4,14 +4,16 @@ using Colegio.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Colegio.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20191110153336_inicio")]
+    partial class inicio
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -32,7 +34,7 @@ namespace Colegio.Data.Migrations
                     b.Property<Guid>("Codigo")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("CreadoEn")
+                    b.Property<DateTime>("CreadoEn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreadoPor")
@@ -42,7 +44,7 @@ namespace Colegio.Data.Migrations
                         .HasColumnType("nvarchar(255)")
                         .HasMaxLength(255);
 
-                    b.Property<DateTime?>("EliminadoEn")
+                    b.Property<DateTime>("EliminadoEn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("EliminadoPor")
@@ -52,7 +54,7 @@ namespace Colegio.Data.Migrations
                         .HasColumnType("nvarchar(50)")
                         .HasMaxLength(50);
 
-                    b.Property<DateTime?>("ModificadoEn")
+                    b.Property<DateTime>("ModificadoEn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ModificadoPor")
@@ -112,7 +114,7 @@ namespace Colegio.Data.Migrations
                     b.Property<Guid>("Codigo")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("CreadoEn")
+                    b.Property<DateTime>("CreadoEn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreadoPor")
@@ -121,13 +123,13 @@ namespace Colegio.Data.Migrations
                     b.Property<string>("Detalles")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("EliminadoEn")
+                    b.Property<DateTime>("EliminadoEn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("EliminadoPor")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime?>("ModificadoEn")
+                    b.Property<DateTime>("ModificadoEn")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("ModificadoPor")
@@ -163,7 +165,7 @@ namespace Colegio.Data.Migrations
                         .HasColumnType("nvarchar(255)")
                         .HasMaxLength(255);
 
-                    b.Property<DateTime?>("FechaNac")
+                    b.Property<DateTime>("FechaNac")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Nacionalidad")
